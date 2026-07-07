@@ -46,16 +46,40 @@ header {
 }
 </style> -->
 
-<script>
-export default {
-}
+<!-- old-2 -->
+<!-- <script>
+export default {};
 </script>
 <template>
-<h1>Hello, Vue.js!</h1>
+  <h1>Hello, Vue.js!</h1>
 </template>
 <style>
 .page {
-max-width: 400px;
-margin: auto;
+  max-width: 400px;
+  margin: auto;
+}
+</style> -->
+
+<!-- b4 tập tin chứa định nghĩa cho component gốc của ứng dụng -->
+<script>
+import AppHeader from "@/components/AppHeader.vue";
+export default {
+  components: {
+    AppHeader,
+  },
+};
+</script>
+<template>
+  <div id="app">
+    <AppHeader />
+    <div class="container mt-3">
+      <router-view />
+    </div>
+  </div>
+</template>
+<style>
+.page {
+  max-width: 400px;
+  margin: auto;
 }
 </style>
